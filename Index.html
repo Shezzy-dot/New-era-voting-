@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Era of Leadership</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0efff;
+      color: #202124;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 680px;
+      margin: 25px auto;
+      padding: 0 12px 30px;
+    }
+
+    .header {
+      background: white;
+      border-radius: 12px;
+      padding: 28px 24px;
+      margin-bottom: 14px;
+      border-top: 8px solid #673ab7;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+
+    .header h1 {
+      margin: 0 0 18px;
+      font-size: 27px;
+      color: #202124;
+    }
+
+    .header p {
+      line-height: 1.6;
+      font-size: 15px;
+      color: #444;
+      margin: 7px 0;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 22px 24px;
+      margin-bottom: 14px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+
+    .question-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 17px;
+      line-height: 1.4;
+    }
+
+    .required {
+      color: #d93025;
+      margin-left: 3px;
+    }
+
+    .email-input {
+      width: 100%;
+      border: none;
+      border-bottom: 2px solid #777;
+      padding: 12px 4px;
+      font-size: 16px;
+      outline: none;
+      background: transparent;
+    }
+
+    .email-input:focus {
+      border-bottom: 2px solid #673ab7;
+    }
+
+    .option {
+      display: flex;
+      align-items: center;
+      margin: 16px 0;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .option input {
+      width: 19px;
+      height: 19px;
+      margin-right: 13px;
+      accent-color: #673ab7;
+      cursor: pointer;
+    }
+
+    .bottom-area {
+      background: white;
+      border-radius: 12px;
+      padding: 22px 24px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+
+    .submit-btn {
+      background: #673ab7;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 12px 27px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background: #5630a5;
+    }
+
+    .submit-btn:disabled {
+      background: #aaa;
+      cursor: not-allowed;
+    }
+
+    .clear-btn {
+      background: transparent;
+      border: none;
+      color: #673ab7;
+      font-size: 14px;
+      cursor: pointer;
+      margin-left: 15px;
+    }
+
+    #message {
+      margin-top: 18px;
+      padding: 13px;
+      border-radius: 7px;
+      display: none;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .success {
+      display: block !important;
+      background: #e6f4ea;
+      color: #137333;
+    }
+
+    .error {
+      display: block !important;
+      background: #fce8e6;
+      color: #c5221f;
+    }
+
+    .checking {
+      display: block !important;
+      background: #f1f3f4;
+      color: #5f6368;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 25px;
+      color: #777;
+      font-size: 13px;
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        margin-top: 10px;
+      }
+
+      .header,
+      .card,
+      .bottom-area {
+        padding: 20px 17px;
+      }
+
+      .header h1 {
+        font-size: 23px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>New Era of Leadership</h1>
+
+    <p>
+      This form is designed to gather members’ opinions in selecting the new
+      Alumni Executive Committee (EXCO).
+    </p>
+
+    <p>
+      Please choose your preferred candidates carefully and give honest
+      responses based on your personal opinion. Your participation will help
+      us select responsible, committed, and capable individuals to serve the
+      Alumni Association.
+    </p>
+
+    <p>
+      Thank you for your participation and support.
+    </p>
+  </div>
+
+
+  <form id="voteForm">
+
+    <!-- EMAIL -->
+    <div class="card">
+      <div class="question-title">
+        Email Address <span class="required">*</span>
+      </div>
+
+      <input
+        type="email"
+        id="email"
+        class="email-input"
+        placeholder="Your email address"
+        required
+      >
+    </div>
+
+
+    <!-- GENERAL SECRETARY -->
+    <div class="card">
+      <div class="question-title">
+        GENERAL SECRETARY <span class="required">*</span>
+      </div>
+
+      <label class="option">
+        <input type="radio" name="generalSecretary" value="Hussein Amirat" required>
+        Hussein Amirat
+      </label>
+
+      <label class="option">
+        <input type="radio" name="generalSecretary" value="Salaudeen Qudus">
+        Salaudeen Qudus
+      </label>
+    </div>
+
+
+    <!-- ASSISTANT SECRETARY -->
+    <div class="card">
+      <div class="question-title">
+        ASSISTANT SECRETARY <span class="required">*</span>
+      </div>
+
+      <label class="option">
+        <input type="radio" name="assistantSecretary" value="Ogundipe Pelumi" required>
+        Ogundipe Pelumi
+      </label>
+
+      <label class="option">
+        <input type="radio" name="assistantSecretary" value="David Adesuwa">
+        David Adesuwa
+      </label>
+    </div>
+
+
+    <!-- FINANCIAL SECRETARY -->
+    <div class="card">
+      <div class="question-title">
+        FINANCIAL SECRETARY <span class="required">*</span>
+      </div>
+
+      <label class="option">
+        <input type="radio" name="financialSecretary" value="Olaide Elijah" required>
+        Olaide Elijah
+      </label>
+
+      <label class="option">
+        <input type="radio" name="financialSecretary" value="Hussein Amirat">
+        Hussein Amirat
+      </label>
+    </div>
+
+
+    <!-- WELFARE -->
+    <div class="card">
+      <div class="question-title">
+        WELFARE <span class="required">*</span>
+      </div>
+
+      <label class="option">
+        <input type="radio" name="welfare" value="Adesuwa David" required>
+        Adesuwa David
+      </label>
+
+      <label class="option">
+        <input type="radio" name="welfare" value="Olaide Elijah">
+        Olaide Elijah
+      </label>
+    </div>
+
+
+    <!-- PRO -->
+    <div class="card">
+      <div class="question-title">
+        PRO <span class="required">*</span>
+      </div>
+
+      <label class="option">
+        <input type="radio" name="pro" value="ASOTA OSAMUDIAMEN*" required>
+        ASOTA OSAMUDIAMEN*
+      </label>
+
+      <label class="option">
+        <input type="radio" name="pro" value="Ashaye Fiyin">
+        Ashaye Fiyin
+      </label>
+    </div>
+
+
+    <!-- ORGANIZING SECRETARY -->
+    <div class="card">
+      <div class="question-title">
+        ORGANIZING SECRETARY <span class="required">*</span>
+      </div>
+
+      <label class="option">
+        <input type="radio" name="organizingSecretary" value="Abayomi Michael" required>
+        Abayomi Michael
+      </label>
+
+      <label class="option">
+        <input type="radio" name="organizingSecretary" value="Omoyemi Timileyin">
+        Omoyemi Timileyin
+      </label>
+    </div>
+
+
+    <!-- FOLLOW UP -->
+    <div class="card">
+      <div class="question-title">
+        FOLLOW UP <span class="required">*</span>
+      </div>
+
+      <label class="option">
+        <input type="radio" name="followUp" value="Ogundipe Pelumi" required>
+        Ogundipe Pelumi
+      </label>
+
+      <label class="option">
+        <input type="radio" name="followUp" value="Olaore Awaal">
+        Olaore Awaal
+      </label>
+    </div>
+
+
+    <!-- MEDIA -->
+    <div class="card">
+      <div class="question-title">
+        MEDIA <span class="required">*</span>
+      </div>
+
+      <label class="option">
+        <input type="radio" name="media" value="Johnson Miracle" required>
+        Johnson Miracle
+      </label>
+
+      <label class="option">
+        <input type="radio" name="media" value="Salaudeen Qudus">
+        Salaudeen Qudus
+      </label>
+    </div>
+
+
+    <!-- VISITATION -->
+    <div class="card">
+      <div class="question-title">
+        VISITATION <span class="required">*</span>
+      </div>
+
+      <label class="option">
+        <input type="radio" name="visitation" value="Ololade Shedrach" required>
+        Ololade Shedrach
+      </label>
+
+      <label class="option">
+        <input type="radio" name="visitation" value="Oloidi Anuoluwapo">
+        Oloidi Anuoluwapo
+      </label>
+    </div>
+
+
+    <!-- SUBMIT AREA -->
+    <div class="bottom-area">
+
+      <button type="submit" class="submit-btn" id="submitBtn">
+        Submit
+      </button>
+
+      <button type="button" class="clear-btn" id="clearBtn">
+        Clear form
+      </button>
+
+      <div id="message"></div>
+
+    </div>
+
+  </form>
+
+  <footer>
+    Alumni Association
+  </footer>
+
+</div>
+
+
+<script>
+
+  /* YOUR GOOGLE APPS SCRIPT WEB APP */
+  const SCRIPT_URL =
+    "https://script.google.com/macros/s/AKfycbwmKKKHTnXFZBfPCNtHRoUvWy6A3iKfyUT7IrE6SEJn8mrCBkDqKG0Aew-5eVasMkrh/exec";
+
+
+  const form = document.getElementById("voteForm");
+  const submitBtn = document.getElementById("submitBtn");
+  const clearBtn = document.getElementById("clearBtn");
+  const message = document.getElementById("message");
+
+
+  /* SHOW MESSAGE */
+  function showMessage(text, type) {
+    message.textContent = text;
+    message.className = type;
+    message.style.display = "block";
+  }
+
+
+  /* HIDE MESSAGE */
+  function hideMessage() {
+    message.textContent = "";
+    message.className = "";
+    message.style.display = "none";
+  }
+
+
+  /*
+    CHECK WHETHER EMAIL HAS ALREADY VOTED
+
+    This uses JSONP because your Google Apps Script
+    is on another domain.
+  */
+  function checkEmail(email) {
+
+    return new Promise(function(resolve, reject) {
+
+      const callbackName =
+        "checkEmail_" +
+        Date.now() +
+        "_" +
+        Math.random().toString(36).substring(2, 8);
+
+      const script = document.createElement("script");
+
+      let finished = false;
+
+      const timeout = setTimeout(function() {
+
+        if (finished) return;
+
+        finished = true;
+
+        cleanup();
+
+        reject(new Error("Email check timed out"));
+
+      }, 10000);
+
+
+      function cleanup() {
+
+        clearTimeout(timeout);
+
+        if (script.parentNode) {
+          script.parentNode.removeChild(script);
+        }
+
+        try {
+          delete window[callbackName];
+        } catch (e) {
+          window[callbackName] = undefined;
+        }
+      }
+
+
+      window[callbackName] = function(data) {
+
+        if (finished) return;
+
+        finished = true;
+
+        cleanup();
+
+        resolve(data);
+
+      };
+
+
+      script.onerror = function() {
+
+        if (finished) return;
+
+        finished = true;
+
+        cleanup();
+
+        reject(new Error("Unable to check email"));
+
+      };
+
+
+      /*
+        IMPORTANT:
+        callback must match the function created above.
+      */
+      const url =
+        SCRIPT_URL +
+        "?email=" +
+        encodeURIComponent(email) +
+        "&callback=" +
+        encodeURIComponent(callbackName) +
+        "&_=" +
+        Date.now();
+
+
+      script.src = url;
+
+      document.body.appendChild(script);
+
+    });
+
+  }
+
+
+  /* GET VALUE OF RADIO BUTTON */
+  function getRadioValue(name) {
+
+    const selected = document.querySelector(
+      'input[name="' + name + '"]:checked'
+    );
+
+    return selected ? selected.value : "";
+
+  }
+
+
+  /* SUBMIT FORM */
+  form.addEventListener("submit", async function(event) {
+
+    event.preventDefault();
+
+    hideMessage();
+
+    const emailInput = document.getElementById("email");
+
+    const email = emailInput.value
+      .trim()
+      .toLowerCase();
+
+
+    /* CHECK EMAIL */
+    if (!email) {
+
+      showMessage(
+        "❌ Please enter your email address.",
+        "error"
+      );
+
+      return;
+
+    }
+
+
+    /* PREVENT MULTIPLE CLICKS */
+    submitBtn.disabled = true;
+
+    submitBtn.textContent = "Checking...";
+
+
+    try {
+
+      /*
+        STEP 1:
+        CHECK IF EMAIL HAS ALREADY VOTED
+      */
+      showMessage(
+        "Checking your email...",
+        "checking"
+      );
+
+
+      const result = await checkEmail(email);
+
+
+      /*
+        IF EMAIL ALREADY EXISTS:
+        STOP HERE.
+
+        IMPORTANT:
+        The vote will NOT be submitted.
+      */
+      if (
+        result &&
+        (
+          result.exists === true ||
+          result.exists === "true" ||
+          result.duplicate === true ||
+          result.duplicate === "true"
+        )
+      ) {
+
+        submitBtn.disabled = false;
+
+        submitBtn.textContent = "Submit";
+
+        showMessage(
+          "❌ This email has already voted. You cannot submit another vote.",
+          "error"
+        );
+
+        return;
+
+      }
+
+
+      /*
+        IF THE SERVER DID NOT RETURN A VALID
+        DUPLICATE-CHECK RESPONSE
+      */
+      if (!result || typeof result.exists === "undefined") {
+
+        throw new Error(
+          "Invalid response from email verification."
+        );
+
+      }
+
+
+      /*
+        STEP 2:
+        EMAIL IS NEW — NOW SUBMIT THE VOTE
+      */
+
+      submitBtn.textContent = "Submitting...";
+
+      showMessage(
+        "Submitting your vote...",
+        "checking"
+      );
+
+
+      const voteData = {
+
+        email: email,
+
+        generalSecretary:
+          getRadioValue("generalSecretary"),
+
+        assistantSecretary:
+          getRadioValue("assistantSecretary"),
+
+        financialSecretary:
+          getRadioValue("financialSecretary"),
+
+        welfare:
+          getRadioValue("welfare"),
+
+        pro:
+          getRadioValue("pro"),
+
+        organizingSecretary:
+          getRadioValue("organizingSecretary"),
+
+        followUp:
+          getRadioValue("followUp"),
+
+        media:
+          getRadioValue("media"),
+
+        visitation:
+          getRadioValue("visitation")
+
+      };
+
+
+      /*
+        STEP 3:
+        SEND VOTE TO GOOGLE APPS SCRIPT
+      */
+      const response = await fetch(
+        SCRIPT_URL,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "text/plain;charset=utf-8"
+          },
+          body: JSON.stringify(voteData)
+        }
+      );
+
+
+      const responseText = await response.text();
+
+
+      /*
+        TRY TO READ THE APPS SCRIPT RESPONSE
+      */
+      let serverResult = null;
+
+      try {
+        serverResult = JSON.parse(responseText);
+      } catch (e) {
+        serverResult = null;
+      }
+
+
+      /*
+        EXTRA DUPLICATE PROTECTION.
+
+        If Apps Script says duplicate,
+        DO NOT show success.
+      */
+      if (
+        serverResult &&
+        (
+          serverResult.duplicate === true ||
+          serverResult.duplicate === "true" ||
+          serverResult.exists === true ||
+          serverResult.exists === "true"
+        )
+      ) {
+
+        submitBtn.disabled = false;
+
+        submitBtn.textContent = "Submit";
+
+        showMessage(
+          "❌ This email has already voted. Your vote was not submitted.",
+          "error"
+        );
+
+        return;
+
+      }
+
+
+      /*
+        IF SERVER EXPLICITLY SAYS SUCCESS
+      */
+      if (
+        serverResult &&
+        serverResult.success === false
+      ) {
+
+        throw new Error(
+          serverResult.message ||
+          "Your vote could not be submitted."
+        );
+
+      }
+
+
+      /*
+        SUCCESS
+      */
+      submitBtn.textContent = "Submitted";
+
+      showMessage(
+        "✅ Vote submitted successfully! Thank you for participating.",
+        "success"
+      );
+
+
+      /*
+        Prevent another submission from
+        the same completed form.
+      */
+      submitBtn.disabled = true;
+
+
+    } catch (error) {
+
+      console.error(error);
+
+      submitBtn.disabled = false;
+
+      submitBtn.textContent = "Submit";
+
+
+      /*
+        Friendly error message
+      */
+      if (
+        error.message &&
+        error.message.toLowerCase().includes("email")
+      ) {
+
+        showMessage(
+          "❌ Unable to check your email. Please check your internet connection and try again.",
+          "error"
+        );
+
+      } else {
+
+        showMessage(
+          "❌ Unable to submit your vote. Please check your internet connection and try again.",
+          "error"
+        );
+
+      }
+
+    }
+
+  });
+
+
+  /* CLEAR FORM */
+  clearBtn.addEventListener("click", function() {
+
+    form.reset();
+
+    hideMessage();
+
+    submitBtn.disabled = false;
+
+    submitBtn.textContent = "Submit";
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+  });
+
+</script>
+
+</body>
+</html>
